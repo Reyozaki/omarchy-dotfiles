@@ -59,7 +59,7 @@
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format": "{icon}",
-    "format-wifi": "{icon} ⇣{bandwidthDownBytes}",
+    "format-wifi": "{icon}",
     "format-ethernet": "󰀂",
     "format-disconnected": "󰖪",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n{bandwidthDownBytes}",
@@ -75,7 +75,7 @@
   "battery": {
     "format": "{capacity}% {icon}",
     "format-discharging": "{capacity}% {icon}",
-    "format-charging": "{capacity}% {icon}",
+    "format-charging": "{capacity}% {icon} {power:>1.0f}W↑ ",
     "format-plugged": "",
     "format-icons": {
       "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
