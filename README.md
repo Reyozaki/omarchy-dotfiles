@@ -51,15 +51,8 @@ Multiple packages can be installed by seperating them with space.
 stow alacritty nvim hypr omarchy
 ```
 
-# Use your dotfiles
-if you want to use this directory setup and store your own configurations, use this command
-```
-# pull the (package_name) configs into the current (package_name) directory
-stow --adopt package_name
-```
-
 ## Simpler setup for all configs
-If packages are not you thing you can skip using a package name directory and simply use the directory path from root/Home.
+If packages are not your thing you can skip using a package directories and simply use the directory path from root/Home.
 ```
 ├── .config/alacritty
 ├── .bashrc
@@ -73,3 +66,11 @@ If packages are not you thing you can skip using a package name directory and si
 └── .config/waybar
 ```
 With this setup you can run `stow .` to create symlinks of all the files and folders listed in the current directory.
+
+# Use your dotfiles
+if you want to use this directory setup and store your own configurations, use this command
+```
+# pull the (package_name) configs into the current (package_name) directory
+stow --adopt package_name    # or . for all
+```
+
