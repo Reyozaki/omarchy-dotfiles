@@ -1,0 +1,29 @@
+# Application bindings
+$terminal = uwsm app -- alacritty
+$browser = omarchy-launch-browser
+
+bindd= CTRL, Q, Close active window, killactive
+bindd = SUPER, return, Terminal, exec, $terminal --working-directory=$(omarchy-cmd-terminal-cwd)
+bindd = SUPER, E, File manager, exec, uwsm app -- nautilus --new-window
+bindd = SUPER, B, Browser, exec, $browser
+bindd = SUPER, C, Visual Studio Code, exec, uwsm app -- code
+bindd = SUPER, L, Music, exec, uwsm app -- localsend
+bindd = SUPER, N, Neovim, exec, $terminal -e nvim
+bindd = SUPER, T, Activity, exec, $terminal -e btop
+bindd = SUPER, D, Docker, exec, uwsm app -- discord
+bindd = SUPER, O, Obsidian, exec, uwsm app -- obsidian -disable-gpu
+
+# If your web app url contains #, type it as ## to prevent hyperland treat it as comments
+bindd = SUPER, A, ChatGPT, exec, omarchy-launch-webapp "https://chatgpt.com"
+bindd = SUPER SHIFT, A, Grok, exec, omarchy-launch-webapp "https://grok.com"
+bindd = SUPER ALT, C, Calendar, exec, omarchy-launch-webapp "https://calendar.google.com/calendar/u/0/r/"
+bindd = SUPER, Y, YouTube, exec, omarchy-launch-webapp "https://youtube.com/"
+bindd = SUPER SHIFT, G, WhatsApp, exec, omarchy-launch-webapp "https://web.whatsapp.com/"
+bindd = SUPER ALT, G, Gmail, exec, omarchy-launch-webapp "https://mail.google.com/mail/u/0/##inbox"
+bindd = SUPER, G, GitHub, exec, omarchy-launch-webapp "https://github.com/"
+bindd = SUPER SHIFT, C, CStimer, exec, omarchy-launch-webapp "https://www.cstimer.net"
+
+# Overwrite existing bindings, like putting Omarchy Menu on Super + Space
+# unbind = SUPER, SPACE
+# bindd = SUPER, SPACE, Omarchy menu, exec, omarchy-menu
+unbind = SUPER, W
