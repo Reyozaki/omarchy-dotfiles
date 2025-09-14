@@ -7,7 +7,7 @@ source ~/.local/share/omarchy/default/bash/rc
 # Make an alias for invoking commands you use constantly
 # alias p='python'
 #
-Use VSCode instead of neovim as your default editor
+# Use VSCode instead of neovim as your default editor
 export EDITOR="code"
 #
 # Set a custom prompt with the directory revealed (alternatively use https://starship.rs)
