@@ -38,10 +38,10 @@ With stow installed in your system run `stow package_name` to apply the configur
 # delete existing directory
 rm -r ~/.config/alacritty
 
-# move local configs
+# move existing directory
 mv ~/.config/alacritty ~/.config/alacritty_default
 
-# apply stow to duplicate alacritty directory in .config with symlink
+# apply stow to create symlink of alacritty
 stow alacritty
 ```
 
@@ -52,7 +52,7 @@ stow alacritty nvim hypr omarchy
 ```
 
 ## Simpler setup for all configs
-If packages are not your thing you can skip using a package directories and simply use the directory path from root/Home.
+If packages are not your thing you can skip using package directories and use the directory path from root/Home.
 ```
 ├── .config/alacritty
 ├── .bashrc
@@ -67,10 +67,11 @@ If packages are not your thing you can skip using a package directories and simp
 ```
 With this setup you can run `stow .` to create symlinks of all the files and folders listed in the current directory.
 
-# Use your dotfiles
+## Use your dotfiles
 if you want to use this directory setup and store your own configurations, use this command
 ```
 # pull the (package_name) configs into the current (package_name) directory
-stow --adopt package_name    # or . for all
+stow --adopt package_name
+# or . for all
 ```
 
