@@ -11,7 +11,7 @@ bindd = SUPER, C, Visual Studio Code, exec, uwsm app -- code
 bindd = SUPER, L, Music, exec, uwsm app -- localsend
 bindd = SUPER, N, Editor, exec, omarchy-launch-editor
 bindd = SUPER, T, Activity, exec, $terminal -e btop
-bindd = SUPER, D, Discord, exec, uwsm app -- discord
+bindd = SUPER, D, Docker, exec, uwsm app -- discord
 bindd = SUPER, O, OBS Studio, exec, uwsm app -- obs
 
 # If your web app url contains #, type it as ## to prevent hyperland treat it as comments
