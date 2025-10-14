@@ -52,7 +52,7 @@ stow alacritty nvim hypr omarchy
 ```
 
 ## Simpler setup for all configs
-If packages are not your thing you can skip using package directories and use the directory path from root/Home.
+If seperate packages are not your thing you can skip using package directories and use the directory path from root or home directory like this.
 ```
 ├── .config/alacritty
 ├── .bashrc
@@ -65,10 +65,10 @@ If packages are not your thing you can skip using package directories and use th
 ├── .config/walker
 └── .config/waybar
 ```
-With this setup you can run `stow .` to create symlinks of all the files and folders listed in the current directory.
+With this setup you can run `stow .` to create symlinks of all the files and folders listed in the current dotfiles directory.
 
 ## Use your dotfiles
-if you want to use this directory setup and store your own configurations, use this command
+if you want to use this setup and store your own configurations, use this command
 ```
 # pull the (package_name) configs into the current (package_name) directory
 stow --adopt package_name
