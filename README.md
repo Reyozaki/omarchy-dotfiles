@@ -1,6 +1,7 @@
 # omarchy-dotfiles
 Desktop environment configurations with Hyprland with on top of Arch Linux, setup is called Omarchy created by DHH.
-Omarchy website: omarchy.org
+Omarchy Website: [omarchy.org](omarchy.org)
+Omarchy Repository: [GitHub](https://github.com/basecamp/omarchy)
 
 # Included Packages
 Isolated with symlinks using GNU Stow.
