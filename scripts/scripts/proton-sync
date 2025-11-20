@@ -1,54 +1,28 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
-# Configuration
-LOCAL_DIR="$HOME/Storage/proton-backup/"
-REMOTE_DIR="remote:backup"
-
-# Temporary mount location for Proton Drive
-MOUNT_DIR="$HOME/Storage/protondrive"
-
-# Argument check
-if [[ $# -ne 1 ]]; then
-    echo "Usage: proton-sync <2fa_code>"
+# Usage: ./proton-sync 2fa_code
+if [ -z "$1" ]; then
+    echo "Usage: proton-sync <2FA_CODE>"
     exit 1
 fi
 
-TWOFA="$1"
+TFA_CODE="$1"
 
-# Ensure mount directory exists
-mkdir -p "$MOUNT_DIR"
+# Configurations
+LOCAL_DIR="$HOME/Storage/proton-backup"
+REMOTE="remote:backup"
 
-# If a stale mount exists, clear it
-if mount | grep -q "$MOUNT_DIR"; then
-    echo "⚠️  Existing mount detected. Cleaning it up..."
-    fusermount -uz "$MOUNT_DIR" || true
-fi
-
-# Mount Proton Drive
-echo "🔌 Mounting Proton Drive..."
-rclone mount "$REMOTE_DIR" "$MOUNT_DIR" \
-    --vfs-cache-mode writes \
-    --protondrive-2fa="$TWOFA" \
-    --daemon
-
-# Wait briefly so the mount becomes active
-sleep 2
-
-if ! mount | grep -q "$MOUNT_DIR"; then
-    echo "❌ Failed to mount Proton Drive."
+# Ensure local directory exists
+if [ ! -d "$LOCAL_DIR" ]; then
+    echo "Local directory '$LOCAL_DIR' does not exist."
     exit 1
 fi
 
-echo "✅ Mounted. Starting sync..."
+echo "🔌 Starting sync to Proton Drive..."
+rclone sync "$LOCAL_DIR" "$REMOTE" --protondrive-2fa="$TFA_CODE" --progress
 
-# Perform the sync
-rclone sync "$LOCAL_DIR" "$MOUNT_DIR" --progress
-
-echo "✅ Sync completed."
-
-# Unmount
-echo "🔌 Unmounting..."
-fusermount -uz "$MOUNT_DIR" || true
-
-echo "✨ Finished successfully."
+if [ $? -eq 0 ]; then
+    echo "✅ Sync completed successfully."
+else
+    echo "❌ Sync failed!"
+fi

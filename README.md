@@ -14,6 +14,7 @@ Isolated with symlinks using GNU Stow.
 ├── hypr
 ├── nvim
 ├── omarchy
+├── scripts
 ├── swayosd
 ├── walker
 └── waybar
@@ -62,6 +63,7 @@ If seperate packages are not your thing you can skip using package directories a
 ├── .config/hypr
 ├── .config/nvim
 ├── .config/omarchy
+├── .config/scripts
 ├── .config/swayosd
 ├── .config/walker
 └── .config/waybar
