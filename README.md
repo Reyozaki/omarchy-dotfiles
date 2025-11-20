@@ -40,7 +40,7 @@ With stow installed in your system run `stow package_name` to apply the configur
 rm -r ~/.config/alacritty
 
 # move existing directory
-mv ~/.config/alacritty ~/.config/alacritty_default
+mv ~/.config/alacritty ./.config/alacritty
 
 # apply stow to create symlink of alacritty
 stow alacritty
