@@ -1,16 +1,8 @@
 #!/usr/bin/env bash
 
-# Usage: ./proton-sync 2fa_code
-if [ -z "$1" ]; then
-    echo "Usage: proton-sync <2FA_CODE>"
-    exit 1
-fi
-
-TFA_CODE="$1"
-
 # Configurations
 LOCAL_DIR="$HOME/Storage/proton-backup"
-REMOTE="remote:backup"
+REMOTE="gdrive:backup"
 
 # Ensure local directory exists
 if [ ! -d "$LOCAL_DIR" ]; then
@@ -18,8 +10,8 @@ if [ ! -d "$LOCAL_DIR" ]; then
     exit 1
 fi
 
-echo "🔌 Starting sync to Proton Drive..."
-rclone sync "$LOCAL_DIR" "$REMOTE" --protondrive-2fa="$TFA_CODE" --progress
+echo "🔌 Starting sync: backup to Google Drive..."
+rclone sync "$LOCAL_DIR" "$REMOTE" --progress
 
 if [ $? -eq 0 ]; then
     echo "✅ Sync completed successfully."
