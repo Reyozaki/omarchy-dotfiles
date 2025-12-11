@@ -18,4 +18,10 @@ source ~/.local/share/omarchy/default/bash/rc
 
 . "$HOME/.local/share/../bin/env"
 alias btop='LC_NUMERIC=C btop'
+
+# automation scripts
 export PATH="$HOME/scripts:$PATH"
+
+# tmuxifier for automating sessions
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
