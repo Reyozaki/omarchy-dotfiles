@@ -1,18 +1,59 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
-# Configurations
-LOCAL_DIR="$HOME/Storage/proton-backup"
+# Configuration
+LOCAL_DIR="$HOME/Storage/backup"
 REMOTE="gdrive:backup"
 
-# Ensure local directory exists
+
+# Safety checks
 if [ ! -d "$LOCAL_DIR" ]; then
-    echo "Local directory '$LOCAL_DIR' does not exist."
+    echo "❌ Local directory '$LOCAL_DIR' does not exist."
     exit 1
 fi
 
-echo "🔌 Starting sync: backup to Google Drive..."
-rclone sync "$LOCAL_DIR" "$REMOTE" --progress
+if ! rclone lsd "$REMOTE" >/dev/null 2>&1; then
+    echo "❌ Remote path '$REMOTE' is invalid or unreachable."
+    exit 1
+fi
 
+
+# Helper: usage message
+usage() {
+    echo "Usage:"
+    echo "  gdrive-sync local   # sync local → remote"
+    echo "  gdrive-sync remote  # sync remote → local"
+    exit 1
+}
+
+
+# Mode selection
+if [ $# -ne 1 ]; then
+    usage
+fi
+
+MODE="$1"
+
+
+case "$MODE" in
+
+    local)
+        echo "🔼 Syncing LOCAL → REMOTE..."
+        rclone sync "$LOCAL_DIR" "$REMOTE" --progress
+        ;;
+
+    remote)
+        echo "🔽 Syncing REMOTE → LOCAL..."
+        rclone sync "$REMOTE" "$LOCAL_DIR" --progress
+        ;;
+
+    *)
+        usage
+        ;;
+esac
+
+
+# Result
 if [ $? -eq 0 ]; then
     echo "✅ Sync completed successfully."
 else

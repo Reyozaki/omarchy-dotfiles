@@ -1,5 +1,5 @@
 # omarchy-dotfiles
-Desktop environment configurations with Hyprland with on top of Arch Linux, setup is called Omarchy created by DHH.
+Desktop environment configurations with Hyprland on top of Arch Linux, setup is called Omarchy — created by DHH.
 Omarchy Website: [omarchy.org](omarchy.org)
 Omarchy Repository: [GitHub](https://github.com/basecamp/omarchy)
 
@@ -16,6 +16,7 @@ Isolated with symlinks using GNU Stow.
 ├── omarchy
 ├── scripts
 ├── swayosd
+├── tmux
 ├── walker
 └── waybar
 ```
@@ -65,6 +66,7 @@ If seperate packages are not your thing you can skip using package directories a
 ├── .config/omarchy
 ├── .config/scripts
 ├── .config/swayosd
+├── .config/tmux
 ├── .config/walker
 └── .config/waybar
 ```
@@ -77,4 +79,3 @@ if you want to use this setup and store your own configurations, use this comman
 stow --adopt package_name
 # or . for all
 ```
-
