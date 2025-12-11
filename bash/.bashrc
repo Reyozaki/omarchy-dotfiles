@@ -25,3 +25,4 @@ export PATH="$HOME/scripts:$PATH"
 # tmuxifier for automating sessions
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
+alias tmr="tmuxifier"
