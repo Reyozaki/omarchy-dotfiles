@@ -6,4 +6,13 @@ return {
   --     -- your configuration options
   --   })
   -- end,
+  -- require("skel").setup({
+  --   -- file pattern -> template mappings
+  --   mappings = {
+  --     ["*.cpp"] = "cpp.skel",
+  --     ["*.html"] = "html.skel",
+  --     -- patterns can map to multiple templates
+  --     ["LICENSE"] = { "license.mit.skel", "license.gpl.skel" },
+  --   },
+  -- }),
 }
