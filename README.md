@@ -17,6 +17,7 @@ Isolated with symlinks using GNU Stow.
 ├── scripts
 ├── swayosd
 ├── tmux
+├── tmuxifier
 ├── walker
 └── waybar
 ```
@@ -67,6 +68,7 @@ If seperate packages are not your thing you can skip using package directories a
 ├── .config/scripts
 ├── .config/swayosd
 ├── .config/tmux
+├── .tmuxifier
 ├── .config/walker
 └── .config/waybar
 ```
