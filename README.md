@@ -1,6 +1,6 @@
 # omarchy-dotfiles
-Desktop environment configurations with Hyprland on top of Arch Linux, setup is called Omarchy — created by DHH.
-Omarchy Website: [omarchy.org](omarchy.org)
+Desktop environment configurations with Hyprland on top of Arch Linux, setup is called Omarchy — created by DHH.<br>
+Omarchy Website: [omarchy.org](omarchy.org)<br>
 Omarchy Repository: [GitHub](https://github.com/basecamp/omarchy)
 
 # Included Packages
@@ -11,6 +11,7 @@ Isolated with symlinks using GNU Stow.
 ├── bash
 ├── btop
 ├── fastfetch
+├── ghostty
 ├── hypr
 ├── nvim
 ├── omarchy
@@ -20,6 +21,7 @@ Isolated with symlinks using GNU Stow.
 ├── tmuxifier
 ├── walker
 └── waybar
+└── xdg-terminals
 ```
 These parent directories are package names that contain the configuration setups as they would be in a Omarchy system.
 
@@ -62,6 +64,7 @@ If seperate packages are not your thing you can skip using package directories a
 ├── .bashrc
 ├── .config/btop
 ├── .config/fastfetch
+├── .config/ghostty
 ├── .config/hypr
 ├── .config/nvim
 ├── .config/omarchy
@@ -71,6 +74,7 @@ If seperate packages are not your thing you can skip using package directories a
 ├── .tmuxifier
 ├── .config/walker
 └── .config/waybar
+└── .config/xdg-terminals.list
 ```
 With this setup you can run `stow .` to create symlinks of all the files and folders listed in the current dotfiles directory.
 
