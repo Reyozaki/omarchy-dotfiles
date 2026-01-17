@@ -40,19 +40,38 @@
 }
 
 #tray {
-  margin-right: 16px;
+  margin-right: 15px;
 }
 
 #bluetooth {
-  margin-right: 17px;
+  margin-right: 12px;
 }
 
 #network {
   margin-right: 13px;
 }
 
+#cpu {
+  margin-right: 10px;
+}
+
+#memory {
+  margin-right: 0px;
+}
+
+#mpris {
+  margin-left: 150px;
+  padding: 0 12px;
+  min-width: 180px;
+}
+
+#mpris label {
+  -gtk-icon-shadow: none;
+  box-shadow: none;
+}
+
 #custom-expand-icon {
-  margin-right: 18px;
+  margin-right: 13px;
 }
 
 tooltip {
