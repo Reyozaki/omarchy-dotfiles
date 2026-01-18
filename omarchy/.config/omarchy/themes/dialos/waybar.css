@@ -1,2 +1,7 @@
-@define-color foreground #8a8a8d;
-@define-color background #1e1e1e;
+/* Vague theme for Waybar
+ * Based on https://github.com/vague2k/vague.nvim
+ * License: MIT
+ */
+
+@define-color foreground #cdcdcd;
+@define-color background #141415;

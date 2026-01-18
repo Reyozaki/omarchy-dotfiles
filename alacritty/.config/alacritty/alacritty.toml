@@ -11,7 +11,7 @@ size = 9
 
 [window]
 padding.x = 14
-padding.y = 14
+padding.y = 8
 decorations = "None"
 
 [keyboard]

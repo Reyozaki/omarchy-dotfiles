@@ -26,3 +26,6 @@ export PATH="$HOME/scripts:$PATH"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 alias tmr="tmuxifier"
+
+# show hidden files/folders with FZF
+export FZF_COMPLETION_DIR_OPTS='--walker dir,follow,hidden'
