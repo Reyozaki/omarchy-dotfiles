@@ -28,6 +28,7 @@ window#waybar.empty #window{
 
 mpris.empty {
   background: transparent;
+  color: transparent;
 }
 
 /* -- Default Module setup -- */
@@ -52,6 +53,8 @@ mpris.empty {
 /* -- Left modules -- */
 #custom-omarchy {
   background-color: @background;
+  color: #7CA161;
+  font-size: 15;
   padding: 0px 6px;
 }
 
@@ -79,7 +82,7 @@ mpris.empty {
   opacity: 0.5;
 }
 
-/* -- Left modules -- */
+/* -- Center modules -- */
 #clock {
   margin-left: 5px;
 }
@@ -107,7 +110,7 @@ mpris.empty {
   margin: 0px 7.5px;
 }
 
-/* -- Left modules -- */
+/* -- Right modules -- */
 #custom-expand-icon {
   background-color: @background;
   border-radius: 10px 0px 0px 10px;
@@ -133,6 +136,9 @@ mpris.empty {
 }
 #battery.critical {
   color: #f51b29;
+}
+#battery.charging {
+  color: #39b382
 }
 
 #network {
