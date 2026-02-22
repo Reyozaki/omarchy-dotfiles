@@ -53,4 +53,6 @@ elif [[ "$status" == "charging" ]]; then
   elif [[ ("$level" -ge "90") && ("$level" -le "100") ]]; then
     printf "🗲 %s%%" "$level"
   fi
+elif [[ "$status" == "fully-charged" ]]; then
+    printf "🗲 FULL!"
 fi

@@ -99,10 +99,10 @@
       "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
       "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
-    "format-full": "󰂅",
+    "format-full": "󰂅 {power:>1.0f}W↑",
     "tooltip-format-discharging": "Time to empty: {time}\nDischarging: ⇣{power:>1.0f}W\nCycles: {cycles}\nHealth: {health}%",
     "tooltip-format-charging": "Time to full: {time}\nCycles: {cycles}\nHealth: {health}%",
-    "tooltip-format-full": "Cycles: {cycles}\nHealth: {health}%",
+    "tooltip-format-full": "Cycles: {cycles}\nHealth: {health}%\nFully Charged❗",
     "interval": 5,
     "on-click": "omarchy-menu power",
     "states": {
