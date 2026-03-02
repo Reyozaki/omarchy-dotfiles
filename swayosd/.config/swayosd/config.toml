@@ -1,4 +1,5 @@
 [server]
 show_percentage = true
-max_volume = 100
+min_brightness = 1
+max_volume = 120
 style = "./style.css"

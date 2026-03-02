@@ -86,13 +86,20 @@ mpris.empty {
 #clock {
   margin-left: 5px;
 }
-#custom-screenrecording-indicator {
+#custom-screenrecording-indicator,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
   min-width: 12px;
   margin-left: 5px;
+  margin-right: 0;
   font-size: 10px;
   padding-bottom: 1px;
 }
 #custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
   color: #a55555;
 }
 
@@ -183,4 +190,3 @@ tooltip {
 .hidden {
   opacity: 0;
 }
-

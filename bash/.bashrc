@@ -27,5 +27,11 @@ export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 alias tmr="tmuxifier"
 
+# making cd easier to use
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
 # show hidden files/folders with FZF
 export FZF_COMPLETION_DIR_OPTS='--walker dir,follow,hidden'
