@@ -19,6 +19,9 @@ source ~/.local/share/omarchy/default/bash/rc
 . "$HOME/.local/share/../bin/env"
 alias btop='LC_NUMERIC=C btop'
 
+# edit dotfiles
+alias dots="cd ~/dotfiles && td"
+
 # automation scripts
 export PATH="$HOME/scripts:$PATH"
 
@@ -26,6 +29,7 @@ export PATH="$HOME/scripts:$PATH"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 alias tmr="tmuxifier"
+alias td="tmr s dev"
 
 # making cd easier to use
 alias ..="cd .."
