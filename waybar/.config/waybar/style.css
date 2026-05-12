@@ -103,6 +103,16 @@ mpris.empty {
   color: #a55555;
 }
 
+#custom-weather {
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+}
+#custom-weather.unavailable {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
 #custom-voxtype {
   min-width: 12px;
   margin: 0px 0px 0px 7.5px;
@@ -145,7 +155,7 @@ mpris.empty {
   color: #f51b29;
 }
 #battery.charging {
-  color: #39b382
+  color: #39b382;
 }
 
 #network {
@@ -159,6 +169,12 @@ mpris.empty {
   padding: 0px 0px 0px 6px;
   margin-right: 4px;
   margin-left: 2px;
+}
+#pulseaudio.muted {
+  color: #f51b29;
+}
+#pulseaudio.bluetooth {
+  color: #4287f5;
 }
 
 #memory {

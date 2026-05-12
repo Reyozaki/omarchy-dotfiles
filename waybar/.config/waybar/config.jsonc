@@ -6,7 +6,7 @@
   "height": 26,
 
   "modules-left": ["custom/omarchy", "hyprland/workspaces", "mpris"],
-  "modules-center": ["clock", "custom/update", "custom/voxtype", "custom/screenrecording-indicator", "custom/idle-indicator", "custom/notification-silencing-indicator"],
+  "modules-center": ["clock", "custom/weather", "custom/update", "custom/voxtype", "custom/screenrecording-indicator", "custom/idle-indicator", "custom/notification-silencing-indicator"],
   "modules-right": [
     "group/tray-expander",
     "pulseaudio",
@@ -75,6 +75,14 @@
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
 
+  "custom/weather": {
+    "exec": "$OMARCHY_PATH/default/waybar/weather.sh",
+    "return-type": "json",
+    "interval": 60,
+    "tooltip": false,
+    "on-click": "notify-send -u low \"$(omarchy-weather-status)\""
+  },
+
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format": "{icon}",
@@ -130,7 +138,7 @@
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
-    "format-muted": "  0%",
+    "format-muted": "  muted ",
     "format-icons": {
       "headphone": "",
       "headset": "",
