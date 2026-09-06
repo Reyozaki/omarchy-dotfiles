@@ -25,17 +25,29 @@ alias dots="cd ~/dotfiles && td"
 # automation scripts
 export PATH="$HOME/scripts:$PATH"
 
+# python environment activation
+alias pyenv="source .venv/bin/activate"
+
+# syncthing
+alias sytng="syncthing"
+
 # tmuxifier for automating sessions
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 alias tmr="tmuxifier"
 alias td="tmr s dev"
 
-# making cd easier to use
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
+# Yt-dlp
+alias yt="yt-dlp"
+
+# Proton VPN
+alias vpn="protonvpn"
+alias vpnc="protonvpn connect"
+alias vpnd="protonvpn disconnect"
 
 # show hidden files/folders with FZF
 export FZF_COMPLETION_DIR_OPTS='--walker dir,follow,hidden'
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/vel/.lmstudio/bin"
+# End of LM Studio CLI section

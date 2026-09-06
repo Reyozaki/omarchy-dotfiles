@@ -152,7 +152,7 @@ mpris.empty {
   color: #fab739;
 }
 #battery.critical {
-  color: #f51b29;
+  color: #cf3c45;
 }
 #battery.charging {
   color: #39b382;
@@ -171,10 +171,13 @@ mpris.empty {
   margin-left: 2px;
 }
 #pulseaudio.muted {
-  color: #f51b29;
+  color: #cf3c45;
 }
 #pulseaudio.bluetooth {
   color: #4287f5;
+}
+#pulseaudio.bluetooth.muted {
+  color: #cf3c45;
 }
 
 #memory {
