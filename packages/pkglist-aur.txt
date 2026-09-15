@@ -1,0 +1,14 @@
+ascii-image-converter
+brave-bin
+dbeaver-ce-bin
+debtap
+freedownloadmanager-bin
+ggshield
+iriunwebcam-bin
+libretro-bsnes2014
+libretro-mame2016
+melonds
+obs-pipewire-audio-capture-bin
+slack-desktop
+z-library-bin
+zen-browser-bin
