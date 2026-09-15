@@ -1,12 +1,21 @@
 # omarchy-dotfiles
+
 Desktop environment configurations with Hyprland on top of Arch Linux, setup is called Omarchy — created by DHH.<br>
 Omarchy Website: [omarchy.org](omarchy.org)<br>
 Omarchy Repository: [GitHub](https://github.com/basecamp/omarchy)
 
+# Preview
+
+![Brand](preview/unlock.png)
+![Desktop](preview/desktop.png)
+![preview](preview/preview.png)
+
 # Included Packages
+
 Isolated with symlinks using GNU Stow.
 
 ```
+.
 ├── alacritty
 ├── bash
 ├── btop
@@ -15,31 +24,40 @@ Isolated with symlinks using GNU Stow.
 ├── hypr
 ├── nvim
 ├── omarchy
+├── packages
+├── README.md
 ├── scripts
 ├── swayosd
 ├── tmux
 ├── tmuxifier
 ├── walker
-└── waybar
+├── waybar
 └── xdg-terminals
 ```
+
 These parent directories are package names that contain the configuration setups as they would be in a Omarchy system.
 
 ## Package setup
+
 ```
 alacritty
 └── .config
     └── alacritty
         └── alacritty.toml
 ```
+
 Each Package is setup with reference to the root directory, allowing individual installation. When you run `stow alacritty` it will go to the local .config directory `~/.config/alacritty`. Similarly, `bash/.bashrc` is symbolically linked to `~/.bashrc`.
 
 # Installation
+
 Clone the repository in a local directory.
+
 ```
 git clone git@github:Reyozaki/omarchy-dotfiles.git
 ```
+
 With stow installed in your system run `stow package_name` to apply the configuration for that specific package in your local system. Conflict will occur if there are local files present where the symlinks are going to be, to prevent conflict you can either delete or move the existing local config files/directory. For example:
+
 ```
 # delete existing directory
 rm -r ~/.config/alacritty
@@ -52,13 +70,16 @@ stow alacritty
 ```
 
 Multiple packages can be installed by seperating them with space.
+
 ```
-# applying changes for multiple packages 
+# applying changes for multiple packages
 stow alacritty nvim hypr omarchy
 ```
 
 ## Simpler setup for all configs
+
 If seperate packages are not your thing you can skip using package directories and use the directory path from root or home directory like this.
+
 ```
 ├── .config/alacritty
 ├── .bashrc
@@ -76,10 +97,13 @@ If seperate packages are not your thing you can skip using package directories a
 └── .config/waybar
 └── .config/xdg-terminals.list
 ```
+
 With this setup you can run `stow .` to create symlinks of all the files and folders listed in the current dotfiles directory.
 
 ## Use your dotfiles
+
 if you want to use this setup and store your own configurations, use this command
+
 ```
 # pull the (package_name) configs into the current (package_name) directory
 stow --adopt package_name
