@@ -1,8 +1,8 @@
-window_root "$PWD" 
+window_root "$PWD"
 new_window "editor"
 
-split_h 10
-send_keys "ls" 1
+split_h 20
+run_cmd "ls" 1
 
 select_pane 0
-send_keys "n ."
+run_cmd "nvim ."

@@ -2,10 +2,15 @@
 # Must be called before `initialize_session`.
 session_root "$PWD"
 
+# tmux turns "." and ":" in session names into "_", so do it up front
+session_name="$(basename "$PWD")"
+session_name="${session_name//[.:]/_}"
+
 # Create session with specified name if it does not already exist. If no
 # argument is given, session name will be based on layout file name.
-if initialize_session "dev"; then
+if initialize_session "$session_name"; then
   load_window "editor"
+  load_window "opencode"
   new_window "terminal"
   select_window 0
   # Create a new window inline within session layout definition.

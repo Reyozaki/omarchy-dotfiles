@@ -22,14 +22,30 @@ alias btop='LC_NUMERIC=C btop'
 # edit dotfiles
 alias dots="cd ~/dotfiles && td"
 
+# git
+alias glo='git log --oneline'
+
 # automation scripts
 export PATH="$HOME/scripts:$PATH"
 
-# python environment activation
+# python
+alias py="python"
+# python  environment activation
 alias pyenv="source .venv/bin/activate"
+
+# pnpm aliases
+alias pn='pnpm'
+alias pne='pnpm exec'
 
 # syncthing
 alias sytng="syncthing"
+
+# tmux
+alias tls="tmux ls"
+alias ta="tmux attach"
+alias tas="tmux attach -t"
+alias te="tmux detach"
+alias tks="tmux kill-session -t"
 
 # tmuxifier for automating sessions
 export PATH="$HOME/.tmuxifier/bin:$PATH"
@@ -41,9 +57,9 @@ alias td="tmr s dev"
 alias yt="yt-dlp"
 
 # Proton VPN
-alias vpn="protonvpn"
-alias vpnc="protonvpn connect"
-alias vpnd="protonvpn disconnect"
+# alias vpn="protonvpn"
+# alias vpnc="protonvpn connect"
+# alias vpnd="protonvpn disconnect"
 
 # show hidden files/folders with FZF
 export FZF_COMPLETION_DIR_OPTS='--walker dir,follow,hidden'
